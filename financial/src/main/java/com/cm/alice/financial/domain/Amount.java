@@ -1,8 +1,6 @@
 package com.cm.alice.financial.domain;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import java.math.BigDecimal;
@@ -12,12 +10,11 @@ import java.util.Currency;
 @Getter
 @ToString
 @Embeddable
+@NoArgsConstructor
 public class Amount {
 
-    @NonNull
     private BigDecimal value;
 
-    @NonNull
     private Currency currency;
 
     public Amount(BigDecimal value, Currency currency) {
